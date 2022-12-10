@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Menu</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="menu">
+        <h1 class="menu__title">Меню</h1>
+        <div class="menu__container">
+          <input class="menu__input" id="menu-input" type="text" />
+          <div class="dish">
+            <h2 class="dish__title"></h2>
+            <div class="ingredients">
+              <ul class="ingredients__list">
+                <li class="ingredients__item">
+                  <label for="name">Інгредієнт:</label>
+                  <input
+                    class="ingredients__input"
+                    type="text"
+                    id="name"
+                    name="name"
+                  />
+                </li>
+                <li class="ingredients__item">
+                  <label for="price">Ціна:</label>
+                  <input
+                    class="ingredients__input"
+                    type="text"
+                    value="0"
+                    id="price"
+                    name="price"
+                  />
+                </li>
+                <li class="ingredients__item">
+                  <label for="count">Кількiсть:</label>
+                  <input
+                    class="ingredients__input"
+                    type="text"
+                    value="0"
+                    id="count"
+                    name="count"
+                  />
+                </li>
+                <li class="ingredients__item">
+                  <label for="total-price">Сума:</label>
+                  <input
+                    class="ingredients__input"
+                    type="text"
+                    value="0"
+                    id="total-price"
+                    name="total-price"
+                  />
+                </li>
+              </ul>
+            </div>
+
+            <div class="recipe">
+              <h3 class="recipe__title"></h3>
+              <ul class="recipe__list">
+                <li class="recipe__item">
+                  <p class="recipe__name"></p>
+                  <span class="recipe__count"></span>
+                </li>
+                <li class="recipe__item">
+                  <p class="recipe__name"></p>
+                  <span class="recipe__count"></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/index.js"></script>
+  </body>
+</html>
