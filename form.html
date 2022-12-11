@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/form.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="menu">
+        <form class="menu__form" action="">
+          <h1 class="menu__title">Меню</h1>
+          <input class="input menu__input" type="text" placeholder="Введіть назву страви."/>
+          <section>
+            <div class="field">
+              <label class="form__label" for="name">Інгредієнт:</label>
+              <input
+                class="input ingredients__input"
+                type="text"
+                value="-"
+                id="name"
+                name="name"
+              />
+            </div>
+
+            <div class="field">
+              <label class="form__label" for="price">Ціна:</label>
+              <input
+                class="input ingredients__input"
+                type="text"
+                value="0"
+                id="price"
+                name="price"
+              />
+            </div>
+
+            <div class="field">
+              <label class="form__label" for="count">Кількiсть:</label>
+              <input
+                class="input ingredients__input"
+                type="text"
+                value="0"
+                id="count"
+                name="count"
+              />
+          </section>
+        </form>
+        <section class="dishes"></section>
+      </div>
+    </div>
+    <script src="/form.js"></script>
+  </body>
+</html>

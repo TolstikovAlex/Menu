@@ -1,0 +1,111 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: 'Caveat', cursive;
+  font-size: 22px;
+  font-weight: bold;
+  
+
+}
+.container {
+  background-color: orange;
+  padding: 10px;
+}
+
+.menu {
+  min-width: 50%;
+  min-height: 100vh;
+  padding: 16px;
+  margin: 0 auto;
+  font-family: 'Caveat', cursive;
+  background-color: #f5f5dc;
+  border: 1px solid black;
+  box-shadow: 10px 10px 24px 0 rgba(0, 0, 0, 0.5);
+}
+
+.menu__title {
+  margin-bottom: 16px;
+}
+
+.input.menu__input {
+  width: 80%;
+  margin-bottom: 30px;
+}
+
+.field {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input {
+  width: 50%;
+  background-color: inherit;
+  font-size: 26px;
+  font-family: inherit;
+  outline: 0;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+
+.submit__btn {
+  margin-left: auto;
+  font-family: inherit;
+  padding: 20px;
+  font-size: inherit;
+  background-color: orange;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+.dish {
+  margin-bottom: 20px;
+}
+
+.dishes {
+  padding-top: 40px;
+}
+
+.ingredient {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  font-weight: normal;
+}
+
+.ingredient__name {
+  font-size: 30px;
+  margin-right: 16px;
+  font-weight: normal;
+}
+
+.ingredient__count {
+  margin-right: 40px;
+}
+
+.crossline {
+  text-decoration: line-through;
+}
+
+@media screen and (min-width: 768px) {
+  .input {
+  width: 30%;
+  }
+
+  .menu__form {
+    width: 60%;
+  }
+
+  .input.menu__input {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
