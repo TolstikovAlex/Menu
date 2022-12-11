@@ -79,7 +79,7 @@ function onCountInput(e) {
   }
 }
 
-menuInput.addEventListener("keydown", onMenuInput);
+menuInput.addEventListener("keyup", onMenuInput);
 menuInput.addEventListener("focus", onFocusMenuInput);
 nameInput.addEventListener("keydown", onNameInput);
 priceInput.addEventListener("keydown", onPriceInput);
