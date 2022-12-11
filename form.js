@@ -46,7 +46,7 @@ function onFocusMenuInput(e) {
 }
 
 function onNameInput(e) {
-  if (nameInput.value && e.key === "Enter") {
+  if (nameInput.value && e.key === 13) {
     priceInput.focus();
     priceInput.value = "";
   } else if (!nameInput.value && e.key === "Enter") {
@@ -79,7 +79,7 @@ function onCountInput(e) {
   }
 }
 
-menuInput.addEventListener("keyup", onMenuInput);
+menuInput.addEventListener("touchend", onMenuInput);
 menuInput.addEventListener("focus", onFocusMenuInput);
 nameInput.addEventListener("keydown", onNameInput);
 priceInput.addEventListener("keydown", onPriceInput);
