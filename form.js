@@ -34,7 +34,7 @@ function createNewDish() {
 }
 
 function onMenuInput(e) {
-  if (menuInput.value && e.keyCode === "13") {
+  if (menuInput.value && e.keyCode === 13) {
     createNewDish();
     nameInput.focus();
     nameInput.value = "";
