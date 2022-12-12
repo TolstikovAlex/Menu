@@ -108,7 +108,7 @@ function onBtnClick() {
   countInput.value = "0";
 }
 
-btn.addEventListener("click", onBtnclick);
+btn.addEventListener("click", onBtnClick);
 menuInput.addEventListener("blur", onMenuInput);
 menuInput.addEventListener("focus", onFocusMenuInput);
 nameInput.addEventListener("blur", onNameInput);
