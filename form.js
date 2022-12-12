@@ -7,20 +7,20 @@ const countInput = document.querySelector("#count");
 const ingredient = document.querySelector(".ingredient");
 const btn = document.querySelector(".btn");
 
-function onFormSubmit(e) {
-  alert("jkh");
-  const isValidValue = !isNaN(e.target.value) && e.target.value;
-  if (isValidValue) {
-    createNewItem();
-    nameInput.focus();
-    nameInput.value = "";
-    priceInput.value = "0";
-    countInput.value = "0";
-  } else {
-    alert("Введіть, будь ласка, кількість.");
-    countInput.focus();
-  }
-}
+// function onFormSubmit(e) {
+//   alert("jkh");
+//   const isValidValue = !isNaN(e.target.value) && e.target.value;
+//   if (isValidValue) {
+//     createNewItem();
+//     nameInput.focus();
+//     nameInput.value = "";
+//     priceInput.value = "0";
+//     countInput.value = "0";
+//   } else {
+//     alert("Введіть, будь ласка, кількість.");
+//     countInput.focus();
+//   }
+// }
 
 function createNewItem() {
   const dish = document.querySelector(".dish");
@@ -86,20 +86,29 @@ function onPriceInput(e) {
 
 function onCountInput(e) {
   const isValidValue = !isNaN(e.target.value) && e.target.value;
-  if (isValidValue && e.key === 13) {
-    createNewItem();
-    nameInput.focus();
-    nameInput.value = "";
-    priceInput.value = "0";
-    countInput.value = "0";
-  } else if (!isValidValue && e.key === 13) {
+  if (isValidValue) {
+    btn.focus();
+    // createNewItem();
+    // nameInput.focus();
+    // nameInput.value = "";
+    // priceInput.value = "0";
+    // countInput.value = "0";
+  } else {
     alert("Введіть, будь ласка, кількість.");
     countInput.focus();
   }
   //   if (countInput.value) {
   //   }
 }
-form.addEventListener("submit", onFormSubmit);
+function onBtnClick() {
+  createNewItem();
+  nameInput.focus();
+  nameInput.value = "";
+  priceInput.value = "0";
+  countInput.value = "0";
+}
+
+btn.addEventListener("click", onBtnclick);
 menuInput.addEventListener("blur", onMenuInput);
 menuInput.addEventListener("focus", onFocusMenuInput);
 nameInput.addEventListener("blur", onNameInput);
