@@ -50,10 +50,10 @@ function onFocusMenuInput(e) {
 
 function onNameInput(e) {
   if (nameInput.value) {
-    priceInput.focus();
     priceInput.value = "";
-  } else if (!nameInput.value) {
+  } else {
     alert("Введіть, будь ласка, інгредієнт.");
+    nameInput.focus();
   }
 }
 
@@ -62,28 +62,30 @@ function onPriceInput(e) {
   if (isValidValue) {
     countInput.focus();
     countInput.value = "";
-  } else if (!isValidValue) {
+  } else {
     alert("Введіть, будь ласка, вартість.");
+    priceInput.focus(); 
   }
 }
 
 function onCountInput(e) {
-  const isValidValue = !isNaN(e.target.value) && e.target.value;
+  const isValidValue = !isNaN(e.target.value) && e.target.value && e.key === 13;
   if (isValidValue) {
     createNewItem();
     nameInput.focus();
     nameInput.value = "";
     priceInput.value = "0";
     countInput.value = "0";
-  } else if (!isValidValue) {
+  } else if (!isValidValue && e.key === 13) {
     alert("Введіть, будь ласка, кількість.");
+    countInput.focus();
   }
-  if (countInput.value) {
-  }
+//   if (countInput.value) {
+//   }
 }
 
 menuInput.addEventListener("blur", onMenuInput);
 menuInput.addEventListener("focus", onFocusMenuInput);
 nameInput.addEventListener("blur", onNameInput);
 priceInput.addEventListener("blur", onPriceInput);
-countInput.addEventListener("blur", onCountInput);
+countInput.addEventListener("keydown", onCountInput);
