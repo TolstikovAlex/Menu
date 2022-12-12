@@ -5,11 +5,11 @@ const nameInput = document.querySelector("#name");
 const priceInput = document.querySelector("#price");
 const countInput = document.querySelector("#count");
 const ingredient = document.querySelector(".ingredient");
-
+const btn = document.querySelector(".btn");
 
 function onFormSubmit(e) {
-  alert('jkh');
-    const isValidValue = !isNaN(e.target.value) && e.target.value;
+  alert("jkh");
+  const isValidValue = !isNaN(e.target.value) && e.target.value;
   if (isValidValue) {
     createNewItem();
     nameInput.focus();
@@ -80,7 +80,7 @@ function onPriceInput(e) {
     countInput.value = "";
   } else {
     alert("Введіть, будь ласка, вартість.");
-    priceInput.focus(); 
+    priceInput.focus();
   }
 }
 
@@ -96,10 +96,10 @@ function onCountInput(e) {
     alert("Введіть, будь ласка, кількість.");
     countInput.focus();
   }
-//   if (countInput.value) {
-//   }
+  //   if (countInput.value) {
+  //   }
 }
-form.addEventListener('submit', onFormSubmit);
+form.addEventListener("submit", onFormSubmit);
 menuInput.addEventListener("blur", onMenuInput);
 menuInput.addEventListener("focus", onFocusMenuInput);
 nameInput.addEventListener("blur", onNameInput);
