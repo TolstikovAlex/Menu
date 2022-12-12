@@ -35,12 +35,11 @@ function createNewDish() {
 
 function onMenuInput(e) {
   alert('ghkjjghkjgkh');
-//   if (menuInput.value && e.key === 13) {
-//     alert('ghkjjghkjgkh')
-// //     createNewDish();
-// //     nameInput.focus();
-// //     nameInput.value = "";
-//   }
+  if (menuInput.value) {
+    createNewDish();
+    nameInput.focus();
+    nameInput.value = "";
+  }
 }
 
 function onFocusMenuInput(e) {
@@ -48,41 +47,41 @@ function onFocusMenuInput(e) {
 }
 
 function onNameInput(e) {
-  if (nameInput.value && e.key === 13) {
+  if (nameInput.value) {
     priceInput.focus();
     priceInput.value = "";
-  } else if (!nameInput.value && e.key === "Enter") {
+  } else if (!nameInput.value) {
     alert("Введіть, будь ласка, інгредієнт.");
   }
 }
 
 function onPriceInput(e) {
   const isValidValue = !isNaN(e.target.value) && e.target.value;
-  if (isValidValue && e.key === "Enter") {
+  if (isValidValue) {
     countInput.focus();
     countInput.value = "";
-  } else if (!isValidValue && e.key === "Enter") {
+  } else if (!isValidValue) {
     alert("Введіть, будь ласка, вартість.");
   }
 }
 
 function onCountInput(e) {
   const isValidValue = !isNaN(e.target.value) && e.target.value;
-  if (isValidValue && e.key === "Enter") {
+  if (isValidValue) {
     createNewItem();
     nameInput.focus();
     nameInput.value = "";
     priceInput.value = "0";
     countInput.value = "0";
-  } else if (!isValidValue && e.key === "Enter") {
+  } else if (!isValidValue) {
     alert("Введіть, будь ласка, кількість.");
   }
-  if (countInput.value && e.key == "Enter") {
+  if (countInput.value) {
   }
 }
 
 menuInput.addEventListener("blur", onMenuInput);
 menuInput.addEventListener("focus", onFocusMenuInput);
-nameInput.addEventListener("keydown", onNameInput);
-priceInput.addEventListener("keydown", onPriceInput);
-countInput.addEventListener("keydown", onCountInput);
+nameInput.addEventListener("blur", onNameInput);
+priceInput.addEventListener("blur", onPriceInput);
+countInput.addEventListener("blur", onCountInput);
