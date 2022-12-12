@@ -6,6 +6,22 @@ const priceInput = document.querySelector("#price");
 const countInput = document.querySelector("#count");
 const ingredient = document.querySelector(".ingredient");
 
+
+function onFormSubmit(e) {
+  alert('jkh')
+    const isValidValue = !isNaN(e.target.value) && e.target.value;
+  if (isValidValue && e.key === 13) {
+    createNewItem();
+    nameInput.focus();
+    nameInput.value = "";
+    priceInput.value = "0";
+    countInput.value = "0";
+  } else if (!isValidValue && e.key === 13) {
+    alert("Введіть, будь ласка, кількість.");
+    countInput.focus();
+  }
+}
+
 function createNewItem() {
   const dish = document.querySelector(".dish");
   const newEl = `
@@ -83,7 +99,7 @@ function onCountInput(e) {
 //   if (countInput.value) {
 //   }
 }
-
+form.addEventListener('submit', onFormSubmit);
 menuInput.addEventListener("blur", onMenuInput);
 menuInput.addEventListener("focus", onFocusMenuInput);
 nameInput.addEventListener("blur", onNameInput);
