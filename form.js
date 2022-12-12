@@ -34,11 +34,13 @@ function createNewDish() {
 }
 
 function onMenuInput(e) {
-  alert('ghkjjghkjgkh');
   if (menuInput.value) {
     createNewDish();
     nameInput.focus();
     nameInput.value = "";
+  } else {
+    alert("Введіть, будь ласка, назву.");
+    menuInput.focus();
   }
 }
 
