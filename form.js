@@ -69,8 +69,8 @@ function onPriceInput(e) {
 }
 
 function onCountInput(e) {
-  const isValidValue = !isNaN(e.target.value) && e.target.value && e.key === 13;
-  if (isValidValue) {
+  const isValidValue = !isNaN(e.target.value) && e.target.value;
+  if (isValidValue && e.key === 13) {
     createNewItem();
     nameInput.focus();
     nameInput.value = "";
@@ -88,4 +88,4 @@ menuInput.addEventListener("blur", onMenuInput);
 menuInput.addEventListener("focus", onFocusMenuInput);
 nameInput.addEventListener("blur", onNameInput);
 priceInput.addEventListener("blur", onPriceInput);
-countInput.addEventListener("keydown", onCountInput);
+countInput.addEventListener("submit", onCountInput);
