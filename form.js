@@ -113,4 +113,4 @@ menuInput.addEventListener("blur", onMenuInput);
 menuInput.addEventListener("focus", onFocusMenuInput);
 nameInput.addEventListener("blur", onNameInput);
 priceInput.addEventListener("blur", onPriceInput);
-countInput.addEventListener("submit", onCountInput);
+countInput.addEventListener("blur", onCountInput);
