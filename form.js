@@ -102,7 +102,8 @@ function onCountInput(e) {
   //   if (countInput.value) {
   //   }
 }
-function onBtnClick() {
+function onBtnClick(e) {
+  e.preventDefault();
   createNewItem();
   nameInput.focus();
   nameInput.value = "";
