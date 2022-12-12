@@ -80,7 +80,7 @@ function onCountInput(e) {
   }
 }
 
-menuInput.addEventListener("touchend", onMenuInput);
+menuInput.addEventListener("keydown", onMenuInput);
 menuInput.addEventListener("focus", onFocusMenuInput);
 nameInput.addEventListener("keydown", onNameInput);
 priceInput.addEventListener("keydown", onPriceInput);
