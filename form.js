@@ -86,17 +86,19 @@ function onPriceInput(e) {
 
 function onCountInput(e) {
   const isValidValue = !isNaN(e.target.value) && e.target.value;
-  if (isValidValue) {
-    btn.focus();
+  if (!isValidValue) {
+    alert("Введіть, будь ласка, кількість.");
+    countInput.focus();
     // createNewItem();
     // nameInput.focus();
     // nameInput.value = "";
     // priceInput.value = "0";
     // countInput.value = "0";
-  } else {
-    alert("Введіть, будь ласка, кількість.");
-    countInput.focus();
-  }
+  } 
+//   else {
+//     alert("Введіть, будь ласка, кількість.");
+//     countInput.focus();
+//   }
   //   if (countInput.value) {
   //   }
 }
