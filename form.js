@@ -10,13 +10,13 @@ const ingredient = document.querySelector(".ingredient");
 function onFormSubmit(e) {
   alert('jkh');
     const isValidValue = !isNaN(e.target.value) && e.target.value;
-  if (isValidValue && e.key === 'Enter') {
+  if (isValidValue) {
     createNewItem();
     nameInput.focus();
     nameInput.value = "";
     priceInput.value = "0";
     countInput.value = "0";
-  } else if (!isValidValue && e.key === 'Enter') {
+  } else {
     alert("Введіть, будь ласка, кількість.");
     countInput.focus();
   }
