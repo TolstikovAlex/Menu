@@ -34,12 +34,13 @@ function createNewDish() {
 }
 
 function onMenuInput(e) {
-  if (menuInput.value && e.key === 13) {
-    alert('ghkjjghkjgkh')
-//     createNewDish();
-//     nameInput.focus();
-//     nameInput.value = "";
-  }
+  alert('ghkjjghkjgkh');
+//   if (menuInput.value && e.key === 13) {
+//     alert('ghkjjghkjgkh')
+// //     createNewDish();
+// //     nameInput.focus();
+// //     nameInput.value = "";
+//   }
 }
 
 function onFocusMenuInput(e) {
